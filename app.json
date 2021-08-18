@@ -1,0 +1,49 @@
+{
+  "pages": [
+    "pages/search/search",
+    "pages/index/index",
+    "pages/dayRecommend/dayRecommend",
+    "pages/songDetail/songDetail",
+    "pages/yuncun/yuncun",
+    "pages/profile/profile",
+    "pages/login/login",
+    "pages/boke/boke"
+   
+  ],
+  "tabBar": {
+    "color": "#B2B2B2",
+    "selectedColor": "#FF5F60",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "发现",
+        "iconPath": "/static/images/find.png",
+        "selectedIconPath": "/static/images/find_h.png"
+      },
+      {
+        "pagePath": "pages/profile/profile",
+        "text": "我的",
+        "iconPath": "/static/images/profile.png",
+        "selectedIconPath": "/static/images/profile_h.png"
+      },
+      {
+        "pagePath": "pages/yuncun/yuncun",
+        "text": "云村",
+        "iconPath": "/static/images/yuncun.png",
+        "selectedIconPath": "/static/images/yuncun_h.png"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#d43c33",
+    "navigationBarTitleText": "晚抑云音乐",
+    "navigationBarTextStyle": "white"
+  },
+  "requiredBackgroundModes": [
+    "audio"
+  ],
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

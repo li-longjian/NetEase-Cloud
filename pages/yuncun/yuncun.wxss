@@ -1,0 +1,124 @@
+
+  
+.scroll{
+  display:flex;
+  padding:20rpx 10px;
+
+}
+.scroll_content{
+  height:120rpx;
+}
+ .scroll  .scroll-item{
+   text-align: center;
+   font-size: 14px;
+  
+}
+.scroll-item .title{
+  width:150rpx;
+  height:60rpx;
+  line-height: 60rpx;
+  display:block;
+}
+.active{
+  background-color:#F7F1F1;
+  color:#D43C33;
+  border-radius: 30rpx;
+}
+/* s搜索 */
+.serach{
+  margin:0rpx  25rpx 20rpx 25rpx;
+  text-align: center;
+  height:70rpx;
+  background-color: rgba(100, 100, 100, .1);
+  line-height: 70rpx;
+  border-radius: 35rpx;
+}
+.serach image{
+  width:40rpx;
+  height:40rpx;
+  position: relative;
+  top:10rpx;
+}
+.serach text{
+  font-size:14px;
+  padding:15rpx;
+  color:rgba(100, 100, 100, .7)
+}
+
+/* 视频播放 */
+.vedioScroll{
+  height: calc(100vh - 190rpx)
+}
+.videioItem{
+  padding:30rpx 4%;
+ 
+}
+.videioItem .commonstyle{
+  width: 100%;
+  border-radius: 30rpx;
+}
+
+/* 发布者信息 */
+.content .title{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  white-space: nowrap;
+  font-size: 14px;
+}
+.content .creator{
+  position: relative;
+ 
+}
+.content .creator image{
+  width:45rpx;
+  height:45rpx;
+  border-radius: 50%;
+  position: relative;
+  top:15rpx;
+}
+.content .creator .nickname{
+  padding-left:20rpx;
+}
+.relateSong image{
+  width:26rpx;
+  height:26rpx;
+}
+
+.creator .relateSong{
+  position: absolute;
+  right:0;
+  top:0;
+  display: flex;
+}
+.creator .relateSong .relateItem{
+  
+  width:80rpx;
+  text-align: center;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+.relateSong text{
+  font-size: 10px;
+  padding-top:10rpx;
+}
+.relateItem .iconfont{
+  font-size:30rpx;
+  color:#bfbfbf;
+  position: relative;
+  top:10rpx;
+  position: relative;
+ 
+}
+.relateItem .textshare{
+  position: relative;
+  top:-58rpx;
+}
+.share{
+  opacity:0;
+  height:60rpx;
+  position: relative;
+  top:-20rpx;
+  padding-top: 20rpx;
+}

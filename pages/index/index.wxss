@@ -1,0 +1,136 @@
+/* pages/index/index.wxss */
+.continer{
+  height:100%
+}
+.banner{
+  width:100%;
+  height:300rpx;
+}
+.banner image{
+  width:100%;
+  height:100%;
+}
+.navContainer{
+  display: flex;
+  padding-top:30rpx;
+  padding-bottom:25rpx;
+  border-bottom:1px solid rgba(100,100,100,.1);
+}
+
+.navItem{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex:1;
+  font-size: 28rpx;
+  
+}
+
+.navItem .iconfont{
+  width:100rpx;
+  height:100rpx;
+  border-radius: 50%;
+  font-size:50rpx;
+  text-align: center;
+  line-height: 100rpx;
+  background-color: #FDF1F1 ;
+  color:#FE3A3B;
+  margin-bottom: 25rpx;
+}
+
+.navItem text{
+  font-size: 12px;
+}
+/**
+* 推荐歌单
+*/
+.recommend{
+  width:100%;
+  height:350rpx;
+  padding:25rpx;
+}
+
+.scroll-view{ 
+  padding:20rpx 0;
+  height:290rpx;
+  display: flex;
+}
+.scrollItem{
+  width:260rpx;
+  margin-right: 10rpx;
+}
+.scrollItem image{
+  width:200rpx;
+  height:200rpx;
+  border-radius: 20rpx;
+}
+.scrollItem text{
+  /* 单行隐藏 */
+  /* width:260rpx;
+  font-size: 12px;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; */
+
+  /* 多行隐藏 */
+  width:200rpx;
+  font-size: 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+/**
+*排行榜
+*/
+.hotBand{
+  padding:25rpx;
+  margin-top:30rpx;
+  border-top:20rpx solid rgba(100,100,100,.1)
+}
+.topList{
+  padding-top: 30rpx;
+  height:900rpx;
+
+}
+.topList .topListItem{
+  border:1px solid rgba(100,100,100,.1);
+  border-radius: 30rpx;
+  box-shadow:0 0 15rpx rgba(100,100,100,.1);
+}
+.title{
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  height:60rpx;
+  line-height: 60rpx;
+}
+.topListItem .contentItem{
+  display: flex;
+  align-items: center;
+  margin:20px 30rpx;
+}
+.topListItem .contentItem image{
+  width:150rpx;
+  height:150rpx
+}
+.rightContent{
+  padding-left: 20rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.contentItem .num{
+ font-size: 16px;
+ font-weight: bold;
+}
+.contentItem .name{
+  font-size:16px;
+  padding-left:20rpx;
+}
+.contentItem .author_name{
+  font-size:12px;
+  padding-left:20rpx;
+}

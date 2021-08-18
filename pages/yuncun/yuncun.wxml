@@ -1,0 +1,84 @@
+<view>
+<!-- 头部 -->
+  <scroll-view scroll-x  enable-flex 
+  class="scroll_content " 
+  scroll-into-view="{{'scroll'+currentId}}"
+  scroll-with-animation
+  
+   >
+    <view class="scroll">
+      <view id="{{'scroll'+item.id}}" class="scroll-item {{currentId === item.id ? 'active':''}}" 
+      wx:for="{{navDataList}}" wx:key="id"
+      bindtap="changeIndex"
+      id="{{item.id}}"
+      data-id="{{item.id}}"
+     >
+        <text class="title"> {{item.name}} </text>
+      </view>
+    </view>
+     
+    
+  </scroll-view>
+  <!-- 搜索框 -->
+  <view class="serach">
+    <image src="/static/images/search.png" > </image>
+    <text>哪些歌词是长大后才真正看懂？</text>
+  </view>
+
+  <!-- 视频列表 -->
+  <scroll-view scroll-y 
+  class="vedioScroll"
+  refresher-enabled
+  bindrefresherrefresh="pullingRefresh"
+  bindscrolltolower="loadMore"
+  refresher-triggered="{{isRefresh}}"
+  wx:if="{{cookie.length}}"
+  >
+    <view class="videios">
+    <view class="videioItem" wx:for="{{videoDataList}}" wx:key="index">
+      <video src="{{item.data.urlInfo.url}}" 
+      class="commonstyle"
+      controls danmu-btn
+       enable-danmu 
+       danmu-list
+        autoplay="true"
+        bindplay="hanldPlay"
+        id = "{{item.data.vid}}"
+        poster="{{item.data.coverUrl}}"
+        wx:if="{{videoId === item.data.vid}}"
+        object-fit="cover"
+        bindtimeupdate="hanldtimeUpdate"
+        bindended="handended"
+        ></video>
+        <image wx:else bindtap="hanldPlay" id="{{item.data.vid}}" class="commonstyle" src="{{item.data.coverUrl}}"></image>
+       <view class="content">
+         <text class="title">{{item.data.title}}</text>
+         <view class="creator">
+          <image src="{{item.data.creator.avatarUrl}}"></image>
+          <text class="nickname">{{item.data.creator.nickname}}</text>
+          <view class="relateSong">
+            <view class="relateItem">
+              <image src="/static/images/good.png"></image>
+              <text>{{item.data.praisedCount}}</text>
+            </view>
+            <view class="relateItem">
+              <image src='/static/images/comment.png'></image>
+              <text>{{item.data.commentCount}}</text>
+            </view>
+            <view class="relateItem">
+              <text class="iconfont icon-fenxiang1"></text>
+            <button class="share" open-type="share" > </button>
+            <text class="textshare">{{item.data.shareCount}}</text>
+              
+            </view>
+           
+            
+          </view>
+         </view>
+      </view>
+    </view>
+  </view>
+  
+  </scroll-view>
+  <view wx:else>暂无推荐视频,请先登录</view>
+</view>

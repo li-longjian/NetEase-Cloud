@@ -1,0 +1,40 @@
+<view>
+<!-- 头部 -->
+<view class="header">
+  <view class="re_banner">
+    <image src="/static/images/recommend.jpg"></image>
+  </view>
+  <view class="now_date">
+    <text class="Day">{{day }} </text>
+    <text class="Month">/{{month}}</text>
+  </view>
+</view>
+ 
+ <!-- 内容区域 -->
+ <view class="wrapper">
+  <view class="headtitle">
+      <text class="iconfont icon-bofang"></text>
+      <text class="playAll">播放全部</text>
+      <text class="seleteAll">全选</text>
+    </view>
+ <scroll-view class="scrollView" scroll-y>
+  <view calss="scrollArea">
+    
+    <view class="SongContent" wx:for="{{RecommendSong}}" wx:key="id">
+     
+      <view class="songitem" bindtap="toMusicdetail" id="{{item.id}}" data-index="{{index}}" data-micid="{{item.id}}">
+        <image src="{{item.album.picUrl}}"  ></image>
+      <view class="songRelate">
+        <text class="songName">{{item.name}}</text>
+        <text class="author">{{item.artists[0].name}}-{{item.album.name}}</text>
+      </view>
+      </view>
+      
+      <text class="iconfont icon-more"></text>
+    </view>
+  </view>
+ </scroll-view>
+ </view>
+ 
+ 
+</view>

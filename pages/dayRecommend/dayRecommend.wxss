@@ -1,0 +1,94 @@
+.re_banner image{
+  width:100%;
+  height:370rpx;
+ 
+}
+.header{
+  position: relative;
+ 
+}
+.now_date{
+  color:#fff;
+  /* border: 1px solid #000; */
+  position:absolute;
+  right:15%;
+  bottom: 20%;
+}
+.now_date .Day{
+  font-size: 52rpx;
+  
+}
+
+
+.wrapper{
+  position: relative;
+  top:-40rpx;
+  border-radius: 35rpx;
+  background-color:#fff
+}
+.headtitle{
+ 
+  height:80rpx;
+  line-height: 80rpx;
+  padding-left: 25rpx;
+  /* padding-bottom: 35rpx; */
+}
+.iconfont{
+  color: #D43C33;
+  font-size: 40rpx;
+}
+.seleteAll{
+  float:right;
+ padding-right: 25rpx;
+ font-size: 26rpx;
+}
+.playAll{
+  font-weight: bold;
+  padding-left:25rpx;
+}
+.scrollView{
+  height: calc(100vh - 460rpx);
+}
+.SongContent{
+  display:flex;
+  position: relative;
+  margin-left:25rpx;
+  margin-bottom: 30rpx;
+}
+.songitem{
+  display: flex;
+}
+.SongContent image{
+  width:80rpx;
+  height:80rpx;
+  border-radius: 15rpx;
+}
+.SongContent .songRelate{
+  display: flex;
+  flex-direction: column;
+  padding-left:30rpx;
+}
+.songRelate .songName{
+  font-size: 28rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.songRelate .author{
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size:24rpx;
+  color:rgba(100,100,100,.6);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+}
+.SongContent .iconfont {
+  padding:15rpx 30rpx;
+ position: absolute;
+ right: 15rpx;
+ color:rgba(100,100,100,.5)
+}

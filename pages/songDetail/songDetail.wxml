@@ -1,0 +1,45 @@
+<view class="contianer">
+  <view class="header">
+    <view class="header_son">
+      <!-- <image class="back" src="/static/images/back.png"></image> -->
+      <text class="songname">{{songDetail.name}}</text>
+      <image class="share" src="/static/images/share_h.png"></image>
+    </view>
+    <view class="author">{{songDetail.ar[0].name}}</view>
+  </view>
+  <view class="circle"></view>
+  <image class="needle {{ isPlay && 'needleRotate'}}" src="/static/images/needle.png"></image>
+  <view class="disbox {{isPlay && 'discAnimation'}}">
+    <image src="/static/images/disc.png" class="disc"></image>
+    <image src="{{songDetail.al.picUrl}}" class="musicpic"></image>
+  </view>
+
+  <!-- 进度条 -->
+  <view class="progressBox">
+    <text>{{currentPregressTime}}</text>
+    <view class="progressLine">
+    <!-- <view class="cushioningTime" ></view> -->
+      <view class="currentProgress" style="width: {{currentWidth}}rpx;">
+        <view class="circle">
+        </view>
+      </view>
+    </view>
+    <text>{{destinationProgressTime}}</text>
+  </view>
+
+  <!-- 播放控制栏 -->
+  <view class="control">
+    <text class="iconfont icon-xunhuan"></text>
+
+<!-- 上一首 -->
+    <text class="iconfont icon-shangyishoushangyige" id="pre" bindtap="switchSong"></text>
+<!-- 播放与暂停 -->
+    <text class="iconfont {{isPlay ?'icon-ico_zanting_xuanzhong' :'icon-bofang1'}} big" 
+          bindtap="MusicPlay"
+    ></text>
+<!-- 下一首 -->
+    <text class="iconfont icon-xiayigexiayishou" id="next" bindtap="switchSong"></text>
+
+    <text class="iconfont icon-bofangliebiao"></text>
+  </view>
+</view>

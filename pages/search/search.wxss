@@ -1,0 +1,99 @@
+.searchContianer{
+  margin-left: 20rpx;
+}
+.header{
+  display:flex;
+  padding:20rpx 0;
+  height:80rpx;
+  position: relative;
+}
+
+.inputItem{
+  flex: 1;
+}
+.inputItem .searchIcon{
+  font-size:46rpx;
+  position: absolute;
+  left:25rpx;
+  top:35rpx;
+  color:rgb(100, 100, 100,.6)
+}
+.inputItem input{
+  background-color: rgba(100, 100, 100, .1);
+  height:70rpx;
+  border-radius: 45rpx;
+  padding-left:100rpx;
+}
+.cancle{
+  width:120rpx;
+  text-align: center;
+  height:70rpx;
+  line-height: 70rpx;
+}
+
+/* 热搜榜 */
+/* .hotContianer{
+
+} */
+.Hot{
+  height:80rpx;
+  line-height: 80rpx;
+  border-bottom: 1px solid rgba(100, 100, 100, .2);
+}
+.HotsearchItem{
+  padding-left: 10rpx ;
+  display:flex;
+  flex-wrap: wrap;
+}
+.HotItem{
+  width:50%;
+  height:80rpx;
+  line-height:80rpx;
+}
+.name{
+  padding-left: 20rpx;
+}
+.icon{
+  width:36rpx;
+  height:30rpx;
+  position: relative;
+  top:-10rpx;
+  left: 8rpx;
+}
+.resBox{
+ 
+  border-bottom: 1px solid rgba(100,100,100,.1);
+}
+.resName{
+  width:100%;
+  height:80rpx;
+  line-height: 80rpx;
+  padding:20rpx;
+}
+.history{
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+.title{
+  font-size:28rpx;
+  height:50rpx;
+  line-height: 50rpx;
+}
+.historyItem{
+  font-size:26rpx;
+  background-color: rgba(100, 100, 100, .1);
+  padding:0 20rpx;
+  height:50rpx;
+  line-height: 50rpx;
+  text-align: center;
+  margin-left:20rpx;
+  margin-top:10rpx;
+  border-radius: 20rpx;
+}
+.deleteIcon{
+  font-size: 38rpx;
+  position: absolute;
+  bottom: 0;
+  right:40rpx;
+}

@@ -1,0 +1,78 @@
+<view class="pro_contianer">
+<!-- 登录 -->
+  <view class="header" bindtap="tologin">
+    <image src = '{{userInfo.userId ? userInfo.avatarUrl :" /static/images/user.png"}}' ></image>
+    <text >{{userInfo.userId ? userInfo.nickname : ' 立即登录 '}}</text>
+  </view>
+  <!-- 功能选择区 -->
+  <view class="func">
+
+      <view class="funncItem">
+      <text class="iconfont icon-wenjianjia" ></text>
+      <text class="text">本地/下载</text>
+    </view>
+    <view class="funncItem">
+      <text class="iconfont icon-yunpan" ></text>
+      <text class="text">云盘</text>
+    </view>
+    <view class="funncItem">
+      <text class="iconfont icon-gouwu" ></text>
+      <text class="text">已购</text>
+    </view>
+    <view class="funncItem">
+      <text class="iconfont icon-bofang" ></text>
+      <text class="text">最近播放</text>
+    </view>
+   
+    
+    
+      <view class="funncItem">
+      <text class="iconfont icon-haoyou" ></text>
+      <text class="text">我的好友</text>
+    </view>
+    <view class="funncItem">
+      <text class="iconfont icon-xingxing" ></text>
+      <text class="text">收藏和赞</text>
+    </view>
+    <view class="funncItem">
+      <text class="iconfont icon-tubiaozhizuomobanyihuifu-" ></text>
+      <text class="text">我的播客</text>
+    </view>
+    <view class="funncItem">
+      <text class="iconfont icon-jiahao addmore" ></text>
+      <text class="text">音乐应用</text>
+    </view>
+    
+      
+  </view> 
+<!-- 最近播放记录 -->
+<view class="playHistory"> 
+  <NavHeader title="播放历史" class="proNav"></NavHeader>
+  <scroll-view scroll-x enable-flex wx:if="{{musicPlayList.length}}" >
+  <view class="playHistoryScroll" >
+    <view wx:for="{{musicPlayList}}" wx:key="id" class="scroll-item">
+      <image src="{{item.song.al.picUrl}}"></image>
+      <view class="content">
+        <text class="songName">{{item.song.al.name}}</text>
+       <text class="author"> {{item.song.ar[0].name}}</text> 
+      </view>
+    </view>
+  </view>
+    
+  </scroll-view>
+  <view wx:else>暂无播放记录</view>
+</view>
+  <!-- 我喜欢 -->
+  <view class="Like">
+    <view class='img'>
+      <image src="/static/images/like.png"></image>
+    </view>
+    <view class="ILike">
+      <text>我喜欢的音乐</text>
+      <view class="ILikeSongNum">0首</view>
+    </view>
+    <view class="iLikeModule">
+      <text>心动模式</text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,172 @@
+.contianer{
+  background-image: linear-gradient(45deg, rgba(100,100,100,.3), rgba(0,0,0,1));
+  /* background-color: ; */
+  width: 100%;
+  height:100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height:80rpx;
+  color:#fff
+}
+.header_son{
+  display:flex;
+  height:50rpx;
+  line-height: 50rpx;
+}
+.header_son image{
+  width:50rpx;
+  height:50rpx;
+  
+}
+.back{
+ position: absolute;
+ left:25rpx;
+ top:0rpx;
+}
+.share{
+  position: absolute;
+ right:25rpx;
+ top:10rpx;
+}
+.songname{
+  flex:1;
+  text-align: center;
+ 
+}
+.author {
+  font-size: 12px;
+}
+/*底座*/
+.circle{
+  width: 60rpx;
+  height:60rpx;
+  border-radius: 50%;
+ background-color: #fff; 
+ margin:20rpx 0;
+ position: relative;
+ z-index: 100;
+}
+/** 摇杆*/
+.needle{
+  width:192rpx;
+  height: 274rpx;
+  position: relative;
+  top:-45rpx;
+  left:60rpx;
+  z-index: 99;
+
+  /*进行旋转*/
+  /* 设置旋转点 */
+  transform-origin: 40rpx 0;
+  transform: rotate(-25deg);
+  transition: transform 1s;
+}
+.needleRotate{
+  /* 当播放时摇杆需要放下 */
+  transform: rotate(0deg);
+  /* 加上过渡使动作不生硬 */
+  transition: transform 1s;
+}
+/*磁盘*/
+.disbox{
+  width:498rpx;
+  height:498rpx;
+  position: relative;
+  top:-170rpx;
+}
+/* 为磁盘旋转设置动画 */
+.discAnimation{
+  /* infinite 无限循环 */
+  /* 5s 一次 */
+  animation: disc 5s linear infinite;
+  /* 延迟动画时间，当摇杆放在磁盘上时再旋转 */
+  animation-delay:0.5s ;
+
+}
+@keyframes disc{
+ from{
+   transform: rotate(0deg);
+ }
+ to{
+   transform: rotate(360deg);
+ }
+}
+.disc{
+  width: 498rpx;
+  height:498rpx;
+}
+/*中间图片*/
+.musicpic{
+  width:320rpx;
+  height:320rpx;
+  border-radius: 50%;
+  position: absolute;
+  top:0;
+  bottom: 0;
+  left:0;
+  right: 0;
+  margin:auto
+}
+/* 进度条控制区 */
+.progressBox{
+  display:flex;
+  position:absolute;
+  bottom: 150rpx;
+}
+.progressBox text{
+  padding:0 20rpx;
+  color:rgba(255,255,255,.8)
+}
+.progressLine{
+  width:530rpx;
+  height:5rpx;
+  background-color: rgba(100, 100, 100, .5);
+  margin:auto;
+}
+.progressLine .currentProgress{
+ 
+ height:5.5rpx;
+ background-color: #fff;
+ position: relative;
+ z-index: 9;
+}
+.currentProgress .circle{
+  width:12rpx;
+  height:12rpx;
+  border-radius: 50%;
+  background-color: #fff;
+  position: absolute;
+  top:-24rpx;
+  right:-12rpx;
+}
+.progressLine .cushioningTime{
+  width:150rpx;
+  height:5.5rpx;
+  background-color: rgba(255,255,255,.6);
+}
+/* 播放控制栏 */
+.control{
+  display: flex;
+   position: absolute;
+  bottom:20rpx;
+  left:0;
+  width: 100%;
+}
+.control .iconfont {
+  width:20%;
+  height: 120rpx;
+  line-height: 120rpx;
+  text-align: center;
+  font-size: 50rpx;
+  color:#fff;
+ 
+}
+ .big{
+  font-size: 80rpx !important;
+}

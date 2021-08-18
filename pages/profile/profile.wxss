@@ -1,0 +1,129 @@
+.pro_contianer{
+  
+  background-color: #F5F5F5;
+}
+.header{
+  margin-left: 30rpx;
+  padding-top:50rpx;
+  
+}
+.header image{
+  width:64rpx;
+  height:64rpx;
+  border-radius: 50%;
+  background-color: #F7F1F1;
+  border:3px solid #ffffff;
+  padding:10rpx;
+}
+.header text{
+  position: relative;
+  top:-30rpx;
+  left:40rpx;
+  font-size:16px;
+  font-weight: bold;
+}
+.func{
+  background-color: #ffffff;
+  
+  /* border: 1px solid #000; */
+  margin:50rpx 30rpx;
+  border-radius: 25rpx;
+  display: flex;
+  flex-wrap: wrap;
+}
+.iconfont{
+  font-size:60rpx;
+  color:#FF5F60
+}
+.funncItem{
+  width:25%;
+  display: flex;
+  flex-direction: column;
+  height: 150rpx;
+  line-height: 90rpx;
+  padding:30rpx 0;
+
+ text-align: center;
+}
+.funncItem .addmore{
+  color:#B2B2B2
+}
+.funncItem .text{
+  font-size:11px;
+}
+
+.Like{
+  margin:15rpx 30rpx;
+  border-radius: 20rpx;
+  background-color: #ffffff;
+  display: flex;
+  position: relative;
+}
+.Like .img{
+  margin:40rpx 0 30rpx 40rpx;
+  background-color: #9A9A9A;
+  width:100rpx;
+  height:100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  border-radius: 20rpx;
+  align-items: center;
+}
+.Like .img image{
+  padding:20rpx;
+  width:58rpx;
+  height:58rpx;
+}
+.Like .ILike{
+  height:100rpx;
+  padding:40rpx 20rpx;
+}
+.ILike text{
+  font-size:28rpx;
+}
+.ILike .ILikeSongNum{
+  font-size:22rpx;
+  color:#B2B2B2;
+  padding-top: 20rpx;
+}
+
+.Like .iLikeModule text{
+ 
+  position:absolute;
+  right:50rpx;
+  top:50rpx;
+  border: 1px solid rgba(100,100,100,.2);
+  font-size:12px;
+  padding:10rpx;
+  border-radius: 20rpx;
+  
+}
+/* 播放历史 */
+.playHistory{
+  margin:30rpx 30rpx;
+  background-color: #ffffff;
+  border-radius: 25rpx;
+}
+.playHistoryScroll{
+  display:flex;
+  text-align: center;
+}
+.scroll-item{
+  width:100%;
+  margin-right:20rpx;
+  margin-top:25rpx;
+ 
+}
+.scroll-item image{
+  width:220rpx;
+  height:220rpx;
+  border-radius: 25rpx;
+}
+.scroll-item .content{
+  font-size: 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}

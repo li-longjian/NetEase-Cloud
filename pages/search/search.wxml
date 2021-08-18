@@ -1,0 +1,45 @@
+<view class="searchContianer">
+  <view class="header">
+    <view class="inputItem">
+      <!-- <image src="/static/images/search.png" > </image> -->
+      <text class="iconfont icon-sousuo searchIcon"></text>
+      <input type="text" placeholder="{{placeholder}}" bindinput="handleInput"/>
+    </view>
+    <view class="cancle">取消</view>
+  </view>
+<!-- 搜索结果展示 -->
+<block wx:if="{{SearchRusult.length  }}" >
+  <view class="searchContent">
+    <view wx:for="{{SearchRusult}}" class="resBox" wx:key="index">
+      <text class="iconfont icon-sousuo searchResultIcon"></text>
+      <text class="resName" >{{item.name}}</text>
+    </view>
+    
+  </view>
+</block>
+  <!-- 热搜榜 -->
+  <block wx:else>
+    <view class="history">
+      <text class="title">历史</text>
+      <view class="historyItem" wx:for="{{5}}">
+        <text>陈奕迅</text>
+      </view>
+      <text class="iconfont icon-delete deleteIcon"></text>
+    </view>
+    <view class="hotContianer">
+    <view class="Hot">
+    热搜榜
+    </view>
+    <view class="HotsearchItem">
+      <view class="HotItem" wx:for="{{HotSearchList}}" wx:key="index">
+      <text class="index">{{index + 1}}</text>
+      <text class="name">{{item.searchWord}}</text>
+      <image src="{{item.iconUrl}}" wx:if="item.iconUrl" class="icon"></image>
+    </view>
+    </view>
+    
+  </view>
+  </block>
+  
+  
+</view>

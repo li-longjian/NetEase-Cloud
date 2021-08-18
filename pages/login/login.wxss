@@ -1,0 +1,45 @@
+.welcome{
+  font-size:24px;
+  margin:50rpx;
+}
+.input-content{
+  background-color: #F8F8F8;
+  margin:50rpx;
+}
+.input-content .phone{
+  padding:20rpx;
+}
+.input-content input{
+  padding:20rpx;
+  height: 70rpx;
+}
+.input-password{
+  background-color: #F8F8F8;
+  margin:50rpx;
+}
+.input-password .password{
+  padding:20rpx;
+}
+.input-password input{
+  padding:20rpx;
+  height: 70rpx;
+}
+.confirm-btn{
+  background-color: #D43C33;
+  color:#fff;
+  letter-spacing: 10rpx;
+  border-radius: 20rpx;
+}
+.forget{
+  color:#D43C33;
+  position: relative;
+  left:40%;
+  top:20rpx;
+}
+.register{
+  position:absolute;
+  bottom:130rpx;
+  left:30%;
+  font-size:14px;
+  color:#D43C33;
+}
